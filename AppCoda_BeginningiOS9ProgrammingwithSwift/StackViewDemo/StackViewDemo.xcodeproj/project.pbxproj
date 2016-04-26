@@ -12,6 +12,15 @@
 		D193FECF1CC5FEC800E10169 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D193FECD1CC5FEC800E10169 /* Main.storyboard */; };
 		D193FED11CC5FEC800E10169 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D193FED01CC5FEC800E10169 /* Assets.xcassets */; };
 		D193FED41CC5FEC800E10169 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D193FED21CC5FEC800E10169 /* LaunchScreen.storyboard */; };
+		D1F4A9C91CCF5071008F1761 /* t-shirt-1.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C01CCF5071008F1761 /* t-shirt-1.png */; };
+		D1F4A9CA1CCF5071008F1761 /* t-shirt-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C11CCF5071008F1761 /* t-shirt-1@2x.png */; };
+		D1F4A9CB1CCF5071008F1761 /* t-shirt-1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C21CCF5071008F1761 /* t-shirt-1@3x.png */; };
+		D1F4A9CC1CCF5071008F1761 /* t-shirt-2.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C31CCF5071008F1761 /* t-shirt-2.png */; };
+		D1F4A9CD1CCF5071008F1761 /* t-shirt-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C41CCF5071008F1761 /* t-shirt-2@2x.png */; };
+		D1F4A9CE1CCF5071008F1761 /* t-shirt-2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C51CCF5071008F1761 /* t-shirt-2@3x.png */; };
+		D1F4A9CF1CCF5071008F1761 /* t-shirt-3.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C61CCF5071008F1761 /* t-shirt-3.png */; };
+		D1F4A9D01CCF5071008F1761 /* t-shirt-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C71CCF5071008F1761 /* t-shirt-3@2x.png */; };
+		D1F4A9D11CCF5071008F1761 /* t-shirt-3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1F4A9C81CCF5071008F1761 /* t-shirt-3@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		D193FED01CC5FEC800E10169 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D193FED31CC5FEC800E10169 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D193FED51CC5FEC800E10169 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1F4A9C01CCF5071008F1761 /* t-shirt-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-1.png"; path = "t-shirts/t-shirt-1.png"; sourceTree = "<group>"; };
+		D1F4A9C11CCF5071008F1761 /* t-shirt-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-1@2x.png"; path = "t-shirts/t-shirt-1@2x.png"; sourceTree = "<group>"; };
+		D1F4A9C21CCF5071008F1761 /* t-shirt-1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-1@3x.png"; path = "t-shirts/t-shirt-1@3x.png"; sourceTree = "<group>"; };
+		D1F4A9C31CCF5071008F1761 /* t-shirt-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-2.png"; path = "t-shirts/t-shirt-2.png"; sourceTree = "<group>"; };
+		D1F4A9C41CCF5071008F1761 /* t-shirt-2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-2@2x.png"; path = "t-shirts/t-shirt-2@2x.png"; sourceTree = "<group>"; };
+		D1F4A9C51CCF5071008F1761 /* t-shirt-2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-2@3x.png"; path = "t-shirts/t-shirt-2@3x.png"; sourceTree = "<group>"; };
+		D1F4A9C61CCF5071008F1761 /* t-shirt-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-3.png"; path = "t-shirts/t-shirt-3.png"; sourceTree = "<group>"; };
+		D1F4A9C71CCF5071008F1761 /* t-shirt-3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-3@2x.png"; path = "t-shirts/t-shirt-3@2x.png"; sourceTree = "<group>"; };
+		D1F4A9C81CCF5071008F1761 /* t-shirt-3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "t-shirt-3@3x.png"; path = "t-shirts/t-shirt-3@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 		D193FEC81CC5FEC800E10169 /* StackViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D1F4A9BF1CCF5065008F1761 /* images */,
 				D193FEC91CC5FEC800E10169 /* AppDelegate.swift */,
 				D193FECB1CC5FEC800E10169 /* ViewController.swift */,
 				D193FECD1CC5FEC800E10169 /* Main.storyboard */,
@@ -62,6 +81,22 @@
 				D193FED51CC5FEC800E10169 /* Info.plist */,
 			);
 			path = StackViewDemo;
+			sourceTree = "<group>";
+		};
+		D1F4A9BF1CCF5065008F1761 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D1F4A9C01CCF5071008F1761 /* t-shirt-1.png */,
+				D1F4A9C11CCF5071008F1761 /* t-shirt-1@2x.png */,
+				D1F4A9C21CCF5071008F1761 /* t-shirt-1@3x.png */,
+				D1F4A9C31CCF5071008F1761 /* t-shirt-2.png */,
+				D1F4A9C41CCF5071008F1761 /* t-shirt-2@2x.png */,
+				D1F4A9C51CCF5071008F1761 /* t-shirt-2@3x.png */,
+				D1F4A9C61CCF5071008F1761 /* t-shirt-3.png */,
+				D1F4A9C71CCF5071008F1761 /* t-shirt-3@2x.png */,
+				D1F4A9C81CCF5071008F1761 /* t-shirt-3@3x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +157,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1F4A9CA1CCF5071008F1761 /* t-shirt-1@2x.png in Resources */,
+				D1F4A9D11CCF5071008F1761 /* t-shirt-3@3x.png in Resources */,
 				D193FED41CC5FEC800E10169 /* LaunchScreen.storyboard in Resources */,
+				D1F4A9D01CCF5071008F1761 /* t-shirt-3@2x.png in Resources */,
+				D1F4A9CE1CCF5071008F1761 /* t-shirt-2@3x.png in Resources */,
+				D1F4A9CF1CCF5071008F1761 /* t-shirt-3.png in Resources */,
+				D1F4A9CC1CCF5071008F1761 /* t-shirt-2.png in Resources */,
+				D1F4A9C91CCF5071008F1761 /* t-shirt-1.png in Resources */,
+				D1F4A9CB1CCF5071008F1761 /* t-shirt-1@3x.png in Resources */,
 				D193FED11CC5FEC800E10169 /* Assets.xcassets in Resources */,
 				D193FECF1CC5FEC800E10169 /* Main.storyboard in Resources */,
+				D1F4A9CD1CCF5071008F1761 /* t-shirt-2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +330,7 @@
 				D193FEDA1CC5FEC800E10169 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
