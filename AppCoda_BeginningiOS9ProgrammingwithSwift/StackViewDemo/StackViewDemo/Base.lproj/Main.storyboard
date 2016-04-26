@@ -53,20 +53,28 @@
                                     <constraint firstAttribute="width" secondItem="CZZ-ue-oFD" secondAttribute="height" multiplier="280:169" id="1cn-6C-0ZL"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deo-N7-KKd">
-                                <rect key="frame" x="200" y="505" width="200" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43415555519999999" blue="0.29971074180000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sign in">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-et-tXE">
-                                <rect key="frame" x="200" y="550" width="200" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.43415555519999999" blue="0.29971074180000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Sign up with email">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKG-2N-ZWM">
+                                <rect key="frame" x="200" y="503" width="200" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deo-N7-KKd">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.43415555519999999" blue="0.29971074180000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign in">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0p-et-tXE">
+                                        <rect key="frame" x="0.0" y="40" width="200" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.43415555519999999" blue="0.29971074180000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign up with email">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="opK-Q8-RCu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -74,6 +82,8 @@
                             <constraint firstItem="CZZ-ue-oFD" firstAttribute="top" secondItem="2ne-bq-1ay" secondAttribute="bottom" constant="15" id="5p8-hH-sWZ"/>
                             <constraint firstItem="2ne-bq-1ay" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Edu-ng-dnV"/>
                             <constraint firstItem="CZZ-ue-oFD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J60-HL-XJG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HKG-2N-ZWM" secondAttribute="bottom" constant="27" id="Tv7-jZ-H3u"/>
+                            <constraint firstItem="HKG-2N-ZWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hCs-g8-rrh"/>
                             <constraint firstItem="CZZ-ue-oFD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ndf-Zx-Q7S"/>
                         </constraints>
                     </view>
