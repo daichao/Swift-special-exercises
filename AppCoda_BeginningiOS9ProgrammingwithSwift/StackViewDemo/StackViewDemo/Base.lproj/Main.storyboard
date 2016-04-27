@@ -80,7 +80,9 @@
                         <constraints>
                             <constraint firstItem="2ne-bq-1ay" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2rd-KX-cav"/>
                             <constraint firstItem="CZZ-ue-oFD" firstAttribute="top" secondItem="2ne-bq-1ay" secondAttribute="bottom" constant="15" id="5p8-hH-sWZ"/>
-                            <constraint firstItem="2ne-bq-1ay" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Edu-ng-dnV"/>
+                            <constraint firstItem="2ne-bq-1ay" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="Edu-ng-dnV">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="CZZ-ue-oFD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J60-HL-XJG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HKG-2N-ZWM" secondAttribute="bottom" constant="27" id="Tv7-jZ-H3u"/>
                             <constraint firstItem="HKG-2N-ZWM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hCs-g8-rrh"/>
