@@ -31,6 +31,11 @@ class RestaurantTableViewController: UITableViewController {
             "fiveleaves.jpg", "cafelore.jpg", "confessional.jpg", "barrafina.jpg",
             "donostia.jpg", "royaloak.jpg", "thaicafe.jpg"]
     
+    var restaurantIsVisited=[Bool](count: 21, repeatedValue: false)
+    
+    
+    
+    
    override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -49,21 +54,69 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 150.0
+        return 80.0
     }
     
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let optionMenu=UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .ActionSheet)
+        let cancelAction=UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+        let callActionHandler={(action:UIAlertAction) -> Void in
+                let alertMessage=UIAlertController(title: "Service Unavailable", message: "Sorry,the call feature is not available yet.Please try later.", preferredStyle: .Alert)
+                    alertMessage.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+                    self.presentViewController(alertMessage, animated: true, completion: nil)
+        
+        
+        }
+        let isVisitedAction=UIAlertAction(title: "I've been here", style: .Default, handler: {
+            
+            (action:UIAlertAction)->Void in
+            let cell=tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = .Checkmark
+            self.restaurantIsVisited[indexPath.row]=true
+            }
+        )
+        let isNotVisitedAction=UIAlertAction(title: "I've not been here", style: .Default, handler: {
+            (action:UIAlertAction)->Void in
+            let cell=tableView.cellForRowAtIndexPath(indexPath)
+            cell?.accessoryType = .None
+            self.restaurantIsVisited[indexPath.row]=false
+            
+        })
+        
+        let callAction=UIAlertAction(title: "Call "+" 123-000-\(indexPath.row)", style: .Default, handler: callActionHandler)
+        optionMenu.addAction(callAction)
+        optionMenu.addAction(cancelAction)
+        
+        if restaurantIsVisited[indexPath.row]{
+            //let cell=tableView.cellForRowAtIndexPath(indexPath)
+            optionMenu.addAction(isNotVisitedAction)
+        }else{
+            optionMenu.addAction(isVisitedAction)
+        }
+        
+        self.presentViewController(optionMenu, animated: true, completion: nil)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cellIdentifier="PersonalCell"
-//            let cell=tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! PersonalCell
-            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! PersonalCell
+            let cellIdentifier="Cell"
+            let cell=tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! RestaurantTableViewCell
+//            let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! PersonalCell
             cell.nameLabel?.text=restaurantNames[indexPath.row]
-            cell.imageV?.image=UIImage(named: restaurantImages[indexPath.row])
+            cell.thumbnailImageView?.image=UIImage(named: restaurantImages[indexPath.row])
             cell.typeLabel.text=restaurantTypes[indexPath.row]
             cell.locationLabel.text=restaurantLocations[indexPath.row]
         
 //            cell.thumbnailImageView.layer.cornerRadius=30.0//图形变形的力度，值越大，变形力度越大
 //            cell.thumbnailImageView.clipsToBounds=true
             //cell.accessoryType = .DisclosureIndicator
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .Checkmark : .None
+        
+        
             return cell
     }
 }
