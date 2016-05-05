@@ -42,7 +42,7 @@ class RestaurantTableViewController: UITableViewController {
     
     override func viewDidLoad() {
                 super.viewDidLoad()
-                self.tableView.separatorStyle = .None//去除每行之间的分割线
+                //self.tableView.separatorStyle = .None//去除每行之间的分割线
     }
     
    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -100,7 +100,55 @@ class RestaurantTableViewController: UITableViewController {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            restaurantIsVisited.removeAtIndex(indexPath.row)
+            restaurantLocations.removeAtIndex(indexPath.row)
+            restaurantNames.removeAtIndex(indexPath.row)
+            restaurantTypes.removeAtIndex(indexPath.row)
+            restaurantImages.removeAtIndex(indexPath.row)
+        }
+        
+        //tableView.reloadData()
+        
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        
+        print("Total item :\(restaurantNames.count)")
+        for name in restaurantNames {
+            print(name)
+        }
+    }
     
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        //Share
+        let ShareAction=UITableViewRowAction(style: .Default, title: "Share", handler:
+            {
+                (action,indexPath)-> Void in
+                let defaultText="Just checking in at " + self.restaurantNames[indexPath.row]
+                if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]){
+                    let activityController=UIActivityViewController(activityItems: [defaultText,imageToShare], applicationActivities: nil)
+                    self.presentViewController(activityController, animated: true, completion: nil)
+                }
+                
+        })
+        ShareAction.backgroundColor=UIColor(red: 28.0/255.0, green: 165.0/255.0, blue: 253.0/255.0, alpha: 1.0)
+        
+        //Delete
+        let deleteAction=UITableViewRowAction(style: .Default, title: "Delete", handler: {
+        (action,indexPath)->Void in
+            self.restaurantIsVisited.removeAtIndex(indexPath.row)
+             self.restaurantLocations.removeAtIndex(indexPath.row)
+             self.restaurantNames.removeAtIndex(indexPath.row)
+             self.restaurantTypes.removeAtIndex(indexPath.row)
+             self.restaurantImages.removeAtIndex(indexPath.row)
+        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        })
+        deleteAction.backgroundColor=UIColor(red: 202.0/255.0, green: 202.0/255.0, blue: 203.0/255.0, alpha: 1.0)
+        
+        
+        
+        return [deleteAction,ShareAction]
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cellIdentifier="Cell"
