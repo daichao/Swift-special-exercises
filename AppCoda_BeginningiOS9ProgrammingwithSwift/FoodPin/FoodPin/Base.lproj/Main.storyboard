@@ -147,7 +147,6 @@
         <!--Restaurant Detail View Controller-->
         <scene sceneID="bpi-ZU-bUc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FXA-x0-86k" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wv2-ze-pjB" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="23g-qy-gY2"/>
@@ -224,6 +223,7 @@
                         <outlet property="restaurantImageView" destination="Znk-Rz-9v9" id="dtP-FY-Qbx"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXA-x0-86k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926" y="395"/>
         </scene>
