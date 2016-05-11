@@ -11,6 +11,8 @@ import UIKit
 class RestaurantDetailViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     @IBOutlet var restaurantImageView:UIImageView!
+    @IBOutlet var tableView:UITableView!
+    
 //    var restaurantImage = ""
 //    var name = ""
 //    var type = ""
@@ -29,9 +31,19 @@ class RestaurantDetailViewController: UIViewController,UITableViewDelegate,UITab
         // Do any additional setup after loading the view.
         
         restaurantImageView.image=UIImage(named:restaurant.image)
+        tableView.backgroundColor=UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.2)
+        tableView.tableFooterView=UIView(frame: CGRectZero)
+        tableView.separatorColor=UIColor(red: 240.0/255.0, green: 240.0/255.0, blue: 240.0/255.0, alpha: 0.8)
+        title=restaurant.name
 //        namelabel.text=restaurant.name
 //        typelabel.text=restaurant.type
 //        locationlabel.text=restaurant.location
+    }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe=true
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,6 +78,7 @@ class RestaurantDetailViewController: UIViewController,UITableViewDelegate,UITab
             cell.valueLabel.text=""
             
         }
+        cell.backgroundColor=UIColor.clearColor()
         return cell
     }
     

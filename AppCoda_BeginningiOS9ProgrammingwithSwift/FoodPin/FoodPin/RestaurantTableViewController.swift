@@ -67,6 +67,8 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
                 super.viewDidLoad()
                 //self.tableView.separatorStyle = .None//去除每行之间的分割线
+        navigationItem.backBarButtonItem=UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        navigationController?.hidesBarsOnSwipe=true
     }
     
    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
