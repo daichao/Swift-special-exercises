@@ -86,7 +86,11 @@ class RestaurantDetailViewController: UIViewController,UITableViewDelegate,UITab
         return cell
     }
     
-    
+    @IBAction func close(segue:UIStoryboardSegue){
+        
+       
+        
+    }
     
     
     
